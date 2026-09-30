@@ -1,0 +1,52 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0e1013"/>
+      <stop offset="100%" stop-color="#050607"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="32" y1="32" x2="224" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="120" y1="120" x2="220" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Obsidian Base Plate -->
+  <rect x="12" y="12" width="232" height="232" rx="52" fill="url(#bgGrad)" stroke="#27272a" stroke-width="3"/>
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.3"/>
+  
+  <!-- Outer Glow Arc -->
+  <circle cx="128" cy="128" r="90" stroke="url(#emeraldGrad)" stroke-width="3" stroke-dasharray="14 10" stroke-opacity="0.25"/>
+
+  <!-- Tactical Swap Icon Geometry -->
+  <g filter="url(#glow)">
+    <!-- Upper Link Loop (Emerald) -->
+    <path d="M105 85 L85 85 C68.4315 85 55 98.4315 55 115 C55 131.569 68.4315 145 85 145 L105 145" 
+          stroke="url(#emeraldGrad)" stroke-width="14" stroke-linecap="round"/>
+          
+    <!-- Lower Link Loop (Emerald) -->
+    <path d="M151 171 L171 171 C187.569 171 201 157.569 201 141 C201 124.431 187.569 111 171 111 L151 111" 
+          stroke="url(#emeraldGrad)" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Central Link Connector -->
+    <line x1="90" y1="128" x2="166" y2="128" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-opacity="0.9"/>
+  </g>
+
+  <!-- Dynamic Swap Arrows -->
+  <path d="M165 72 L195 72 L180 54" stroke="#10b981" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M91 184 L61 184 L76 202" stroke="#10b981" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- YT Red Indicator Dot -->
+  <circle cx="198" cy="58" r="7" fill="#ff0000" filter="url(#glow)"/>
+</svg>
